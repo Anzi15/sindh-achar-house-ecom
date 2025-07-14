@@ -15,7 +15,6 @@ import CustomerBenefits from "./components/CustomerBenefits";
 import TestimonialSlider from "./components/testimonials-slider";
 import AutoCarousel from "./components/CollectionCarousel";
 import AnimatedDiv from "./components/AnimatedDiv";
-import TikTokEmbed from "./components/TikTokEmbed";
 
 export async function generateMetadata() {
   const title = `Best Achars in Pakistan | Sindh Achar House`;
@@ -206,7 +205,6 @@ export default async function Home() {
         </div>
       </div>
 
-    <TikTokEmbed/>
       <TestimonialSlider testimonials={testimonials} />
 
       <div className="max-w-3xl mx-auto p-6 space-y-6">
