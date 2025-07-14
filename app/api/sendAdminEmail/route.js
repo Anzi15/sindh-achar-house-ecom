@@ -22,11 +22,11 @@ export async function POST(req) {
 
     // Test SMTP Connection
     const testConnection = await transporter.verify();
-      console.log("✅ SMTP Connection Successful:", testConnection);
+    console.log("✅ SMTP Connection Successful:", testConnection);
 
     const mailOptions = {
       from: `"Your Store" <mehrandadbeh.anziandco@gmail.com>`,
-      to: ["rajaf6719@gmail.com", "djam4343@gmail.com", "rajasalmanzs83@gmail.com"],
+      to: ["anziandco@gmail.com", "djam4343@gmail.com"],
       subject: `New Order Received`,
       text: `A new order has been placed. on your website`,
     };

@@ -3,28 +3,18 @@ import { promisify } from 'util';
 
 const execPromise = promisify(exec);
 
-export async function POST() {
-  try {
-    // Run the sitemap generation script
-    await execPromise('npx next-sitemap');
-
-    return new Response(JSON.stringify({ message: 'Sitemap updated successfully' }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to regenerate sitemap' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    try {
+      // Run the sitemap generation script
+      await execPromise('npx next-sitemap');
+      
+      res.status(200).json({ message: 'Sitemap updated successfully' });
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to regenerate sitemap' });
+    }
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-}
-
-export function OPTIONS() {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      Allow: 'POST',
-    },
-  });
 }
