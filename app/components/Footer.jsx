@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   const businessInfo = [
-    { icon: FaPhone, text: "+92 305 3820015", href: "tel:+923047210222" },
+    { icon: FaPhone, text: "03047210222", href: "tel:+9203047210222" },
     {
       icon: FaEnvelope,
       text: "info@sindhacahr.com",
@@ -171,7 +171,7 @@ const Footer = () => {
                     <FaInstagramSquare className="text-2xl" />
                   </Link>
                   <Link
-                    href="https://www.tiktok.com/@sindh.achar.house?_t=ZS-8vzs76Kmx5b&_r=1"
+                    href="https://www.tiktok.com/@sindhacharhouse?_t=ZS-8y6N090NC9A&_r=1"
                     target="_blank"
                     className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300"
                   >
