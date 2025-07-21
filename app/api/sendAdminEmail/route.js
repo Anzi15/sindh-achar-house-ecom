@@ -22,7 +22,7 @@ export async function POST(req) {
 
     // Test SMTP Connection
     const testConnection = await transporter.verify();
-    console.log("✅ SMTP Connection Successful:", testConnection);
+      console.log("✅ SMTP Connection Successful:", testConnection);
 
     const mailOptions = {
       from: `"Your Store" <mehrandadbeh.anziandco@gmail.com>`,
