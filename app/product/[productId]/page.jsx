@@ -2,13 +2,13 @@
 
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../../lib/firebase/firbaseConfig";
-import ProductImgsCarousel from "@/app/components/ProductImgsCarousel";
-import ProductPageUi from "@/app/components/ProductPageUi";
-import HtmlRenderer from "@/app/components/HtmlRenderer";
+import ProductImgsCarousel from "../../components/ProductImgsCarousel";
+import ProductPageUi from "../../components/ProductPageUi";
+import HtmlRenderer from "../../components/HtmlRenderer";
 import Image from "next/image";
-import CustomerBenefits from "@/app/components/CustomerBenefits";
-import TestimonialSlider from "@/app/components/testimonials-slider";
-import ProductSuggestions from "@/app/components/ProductSuggestions";
+import CustomerBenefits from "../../components/CustomerBenefits";
+import TestimonialSlider from "../../components/testimonials-slider";
+import ProductSuggestions from "../../components/ProductSuggestions";
 
 export async function generateMetadata({ params }) {
   const productDoc = await getDoc(doc(db, "Products", params.productId));
