@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   const businessInfo = [
-    { icon: FaPhone, text: "+92 305 3820015", href: "tel:+923047210222" },
+    { icon: FaPhone, text: "+92923047210222", href: "tel:+923047210222" },
     {
       icon: FaEnvelope,
       text: "info@sindhacahr.com",
